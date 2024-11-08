@@ -5,9 +5,9 @@ data = {
     "status_change_date": '2024-12-31-00:00',
     "old_status": "думаем",
     "new_status": "просить помощи",
-    "change_by": "выполнил ",
-    "task": '1'
+    "change_by": "выполнил",
+    "task": 24
 }
 
-response = requests.post("http://127.0.0.1:8000/taskhistorys/2/", json=data)
+response = requests.post("http://127.0.0.1:8000/taskhistorys/", json=data)
 print(response.status_code, response.text)

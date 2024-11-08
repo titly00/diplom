@@ -6,7 +6,7 @@ data = {
     "old_status": "думаем",
     "new_status": "просить помощи",
     "change_by": "выполнил ",
-    "task": '1'
+    "task": 7
 }
 
 response = requests.post("http://127.0.0.1:8000/taskhistorys/", json=data)

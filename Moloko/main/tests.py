@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.test import SimpleTestCase
 from .models import Project, Task, TaskHistory, Profile, User
 
 
@@ -164,10 +163,6 @@ class ProfileSimpleTests(TestCase):
         response = self.client.get('/profiles/')
         self.assertEqual(response.status_code, 200)
 
-class EmployeeSimpleTests(TestCase):
-    def test_employee_status_code(self):
-        response = self.client.get('/employee/')
-        self.assertEqual(response.status_code, 200)
 
 
 

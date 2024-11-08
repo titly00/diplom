@@ -1,6 +1,4 @@
 from rest_framework import serializers
-
-
 from .models import Project, Task, User, TaskHistory, Profile, Employee
 
 
@@ -9,10 +7,12 @@ class ProjectSerializer(serializers.ModelSerializer):
         model = Project
         fields = '__all__'
 
+
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
-        fields = ["id",'title', 'description', 'start_date', 'end_date', 'project', 'assigned_users', 'files']
+        fields = ["id", 'title', 'description', 'start_date', 'end_date', 'project', 'assigned_users', 'files']
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,6 +25,7 @@ class TaskHistorySerializer(serializers.ModelSerializer):
         model = TaskHistory
         fields = '__all__'
 
+
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
@@ -34,4 +35,4 @@ class ProfileSerializer(serializers.ModelSerializer):
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employee
-        fields = ['id',  'user', 'name', 'robot', 'register']
+        fields = ['id', 'user', 'name', 'robot', 'register']

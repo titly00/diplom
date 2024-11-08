@@ -1,10 +1,9 @@
 import requests
 
 
-
 data = {
     "username": "Ariet",
-    "password":"parol09"
+    "password": "parol09"
 
 }
 

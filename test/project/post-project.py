@@ -1,11 +1,13 @@
 import requests
 
-token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5MjU3ODY2LCJpYXQiOjE3MjkyNTc1NjYsImp0aSI6Ijc5MDUxZTQwNzIwYzQwZDY4NDE1MDg0MjMyY2I5NzRkIiwidXNlcl9pZCI6NH0.MndkwhZ4jHhsMqsMK8Q0SpeU4bE6en6_7-0ZZE5SEuQ"
 data = {
-    "role": "jijij",
-    "parol":4338,
-    "user": 5
+
+    "title": "maksim",
+    "description": "думаеm",
+    "start_date": "2024-10-06",
+    "end_date": "2025-04-09",
+    "status": "выполнил3"
 }
 
-response = requests.post("http://127.0.0.1:8000/profiles/1", json=data)
+response = requests.post("http://127.0.0.1:8000/projects/", json=data)
 print(response.status_code, response.text)

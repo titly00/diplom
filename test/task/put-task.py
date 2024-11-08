@@ -3,7 +3,6 @@ import requests
 url = 'http://127.0.0.1:8000/tasks/'
 
 
-
 file_path = 'maxresdefault.jpg'
 
 data = {
@@ -13,7 +12,7 @@ data = {
     "end_date": "2024-12-27",
     "project": 1,
     "assigned_users": [
-            4
+            5
       ]
 }
 

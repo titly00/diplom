@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
@@ -12,6 +13,7 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Task(models.Model):
     title = models.CharField(max_length=123)
@@ -23,6 +25,7 @@ class Task(models.Model):
     assigned_users = models.ManyToManyField(User)
     files = models.FileField(upload_to='filesi/')
 
+
 class TaskHistory(models.Model):
     task = models.ForeignKey(Task,on_delete=models.CASCADE)
     status_change_date = models.DateTimeField()
@@ -30,8 +33,8 @@ class TaskHistory(models.Model):
     new_status = models.CharField(max_length=55)
     change_by = models.CharField(max_length=54)
 
-class Profile(models.Model):
 
+class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     role = models.CharField(max_length=65)
     parol = models.CharField(max_length=12)

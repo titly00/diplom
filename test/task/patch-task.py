@@ -3,22 +3,21 @@ import requests
 url = 'http://127.0.0.1:8000/tasks/'
 
 
-
 file_path = 'maxresdefault.jpg'
 
 data = {
     "title": "ariet",
     "description": "papa",
     "start_date": "2026-12-01",
-    "end_date": "2025-10-27",
+    "end_date": "2099-10-27",
     "project": 1,
     "assigned_users": [
-            3
+            2
       ]
 }
 
 
-response = requests.post("http://127.0.0.1:8000/tasks/1/", json=data)
+response = requests.post("http://127.0.0.1:8000/tasks/", json=data)
 print(response.status_code, response.text)
 
 with open(file_path, "rb") as f:
